@@ -1,3 +1,7 @@
+# 2.0.1
+
+Republish with lib having all src files
+
 # 2.0.0
 
 Distribute local-storage transpiled down to es5 with babel
