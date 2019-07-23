@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/brianzchen/local-storage",
   "scripts": {
-    "build": "babel src --out-dir lib"
+    "build": "babel src --out-dir lib",
+    "prepublishOnly": "yarn build"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
