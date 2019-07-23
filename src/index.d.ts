@@ -1,4 +1,4 @@
-declare module "local-storage" {
+declare module "index" {
     export function set<T>(key: string, value: T): boolean;
     export function get<T>(key: string): T;
     export function remove(key: string): void;

@@ -1,3 +1,7 @@
+# 2.0.0
+
+Distribute local-storage transpiled down to es5 with babel
+
 # 1.4.1
 
 Fix a bug where `local-storage` would throw in IE when using the `file://` protocol

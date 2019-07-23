@@ -1,4 +1,4 @@
-# local-storage
+# local-storage-es5
 
 > A simplified `localStorage` API that just works
 
@@ -8,12 +8,6 @@ Using `npm`
 
 ```shell
 npm install local-storage --save
-```
-
-Using `bower`
-
-```shell
-bower install localstorage --save
 ```
 
 # API
