@@ -7,14 +7,20 @@
 Using `npm`
 
 ```shell
-npm install local-storage --save
+npm i local-storage-es5
+```
+
+Using `yarn`
+
+```shell
+yarn add local-storage-es5
 ```
 
 # API
 
 The API is a simplified way to interact with all things `localStorage`. Note that when `localStorage` is unsupported in the current browser, a fallback to an in-memory store is used transparently.
 
-For that reason, consider that `local-storage` values _might evaporate_ across page views.
+For that reason, consider that `local-storage-es5` values _might evaporate_ across page views.
 
 ## `ls(key, value?)`
 
@@ -23,7 +29,7 @@ If a `value` argument is provided, acts as `ls.set`. When `value` isn't provided
 ##### Example
 
 ```js
-var ls = require('local-storage');
+import ls from 'local-storage-es5';
 
 ls('foo');
 // <- null
@@ -42,7 +48,7 @@ Returns value under `key` in local storage. Equivalent to `ls(key)`. Internally 
 ##### Example
 
 ```js
-var ls = require('local-storage');
+import ls from 'local-storage-es5';
 
 ls('foo', 'bar');
 // <- true
@@ -60,7 +66,7 @@ Returns whether the action succeeded; otherwise, an error was thrown by the brow
 ##### Example
 
 ```js
-var ls = require('local-storage');
+import ls from 'local-storage-es5';
 
 ls.set('foo', 'bar');
 // <- true
@@ -76,7 +82,7 @@ Removes `key` from local storage. Returns `true` if the property was successfull
 ##### Example
 
 ```js
-var ls = require('local-storage');
+import ls from 'local-storage-es5';
 
 ls.set('foo', 'bar');
 // <- true
@@ -92,7 +98,7 @@ Clears local storage.
 ##### Example
 
 ```js
-var ls = require('local-storage');
+import ls from 'local-storage-es5';
 
 ls.set('foo', 'bar');
 ls.set('baz', 'tar');
@@ -106,7 +112,7 @@ If a `store` argument is provided, it sets the backend storage engine. Otherwise
 ##### Example
 
 ```js
-var ls = require('local-storage');
+import ls from 'local-storage-es5';
 
 ls.backend(sessionStorage);
 ls.set('baz', 'tar');
@@ -127,7 +133,7 @@ Listen for changes persisted against `key` on other tabs. Triggers `fn` when a c
 Open a page with the following snippet in multiple tabs. The `storage` event will trigger on all tabs except for the one that persisted the change.
 
 ```js
-var ls = require('local-storage');
+import ls from 'local-storage-es5';
 
 ls.on('foo', storage);
 ls.set('foo', 'bar');
@@ -144,7 +150,7 @@ Removes a listener previously attached with `ls.on(key, fn)`.
 ##### Example
 
 ```js
-var ls = require('local-storage');
+import ls from 'local-storage-es5';
 
 ls.on('foo', storage);
 ls.off('foo', storage);
@@ -152,32 +158,6 @@ ls.off('foo', storage);
 function storage (value) {
   console.log('some other tab changed "foo" to ' + value);
 }
-```
-## Typescript
-
-##### Example
-
-```ts
-import ls, {get,set} from "local-storage";
-
-set<number>('foo',5);
-get<number>('foo');
-
-interface IFoo{
-  bar: string;
-}
-
-ls<IFoo>('foo');
-```
-
-##### Example
-
-```ts
-import * as ls from "local-storage";
-
-ls.set<number>('foo',5);
-ls.get<number>('foo');
-
 ```
 
 # License
