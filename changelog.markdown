@@ -1,10 +1,14 @@
+# 2.0.2
+
+- Log out errors that are thrown when setting into local storage so that bugs can be easily caught
+
 # 2.0.1
 
-Republish with lib having all src files
+- Republish with lib having all src files
 
 # 2.0.0
 
-Distribute local-storage transpiled down to es5 with babel
+- Distribute local-storage transpiled down to es5 with babel
 
 # 1.4.1
 
